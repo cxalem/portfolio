@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@SVGComponents/*": ["./src/components/SVGComponents/*"],
+            "@models/*": ["./models/*"],
+            "@lib/*": ["./lib/*"],
+        }
+    }
+}

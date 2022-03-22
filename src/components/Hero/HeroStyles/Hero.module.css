@@ -1,0 +1,53 @@
+@media screen and (min-width: 240px) {
+  .hero {
+    padding: 40px 30px 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 25px;
+  }
+  .hero .contactMeBtn {
+    border-width: 0;
+    padding: 10px 30px;
+    background: #282828;
+    color: #F9FBFF;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  .hero .contactMeBtn:hover {
+    opacity: 80%;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .hero .infoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero .infoContainer .heroH1 {
+    color: #282828;
+    font-size: 5.9rem;
+    text-align: center;
+    font-weight: 800;
+  }
+  .hero .infoContainer .heroSpan {
+    color: #282828;
+    opacity: 80%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Hero.module.css.map */
