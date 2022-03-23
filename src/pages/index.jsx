@@ -5,9 +5,11 @@ import MySkills from "src/components/MySkills/";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 import Skill from "@models/Skill";
+import Project from "@models/Project"
 import { dbConnect } from "@lib/dbConnect";
+import Projects from "src/components/Projects";
 
-export default function Home({ skills }) {
+export default function Home({ skills, projects }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +23,7 @@ export default function Home({ skills }) {
         <Hero />
         <AboutMe />
         <MySkills skills={skills} />
+        <Projects projects={projects} />
       </main>
 
       <footer className={styles.footer}></footer>
@@ -31,15 +34,22 @@ export default function Home({ skills }) {
 export async function getServerSideProps() {
   try {
     await dbConnect();
-    const res = await Skill.find({});
+    const skillRes = await Skill.find({});
+    const projectRes = await Project.find({})
 
-    const skills = res.map((item) => {
+    const projects = projectRes.map((item) => {
+      const project = item.toObject();
+      project._id = `${project._id}`;
+      return project
+    })
+
+    const skills = skillRes.map((item) => {
       const skill = item.toObject();
       skill._id = `${skill._id}`;
       return skill;
     });
 
-    return { props: { skills } };
+    return { props: { skills, projects } };
   } catch (error) {
     console.log(error);
   }

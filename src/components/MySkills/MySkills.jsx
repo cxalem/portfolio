@@ -7,12 +7,12 @@ export default function MySkills({ skills }) {
     <div className={skillsStyles.mySkillsContainer}>
       <h3 className={skillsStyles.mySkills}>My Skills</h3>
       <div className={skillsStyles.skillsGrid}>
-        {skills.map((skill) => {
+        {skills.map(({skill_title, skill_icon, _id}) => {
           return (
             <SkillCard
-              key={skill._id}
-              skillTitle={skill.skill_title}
-              skillIcon={skill.skill_icon}
+              key={_id}
+              skillTitle={skill_title}
+              skillIcon={skill_icon}
             />
           );
         })}
