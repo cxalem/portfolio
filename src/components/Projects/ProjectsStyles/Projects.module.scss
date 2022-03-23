@@ -10,6 +10,9 @@ $background-color: #f9fbff;
       display: flex;
       column-gap: 15px;
       width: 100%;
+      a {
+        width: 100%;
+      }
       button {
         width: 100%;
         padding: 10px 25px;

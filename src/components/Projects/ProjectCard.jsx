@@ -7,6 +7,8 @@ export default function ProjectCard({
   projectTitle,
   projectDescription,
   projectTechnologies,
+  repo,
+  deploy
 }) {
   return (
     <div className={projectsStyles.projectCardContainer}>
@@ -23,8 +25,8 @@ export default function ProjectCard({
       </div>
       <p className={projectsStyles.projectP}>{projectDescription}</p>
       <div className={projectsStyles.btnsContainer}>
-          <button className={projectsStyles.gitHub}><span>View repo</span></button>
-          <button className={projectsStyles.deploy}>Deploy</button>
+          <a href={repo} rel="noreferrer" target="_blank"><button className={projectsStyles.gitHub}><span>View repo</span></button></a>
+          <a href={deploy} rel="noreferrer" target="_blank"><button className={projectsStyles.deploy}>Deploy</button></a>
       </div>
     </div>
   );

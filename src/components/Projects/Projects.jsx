@@ -8,13 +8,15 @@ export default function Projects({ projects }) {
       <h3 className={projectsStyles.myProjects}>My Projects</h3>
       <div className={projectsStyles.projectsDiv}>
         {projects.map(
-          ({ project_title, project_description, project_technologies, _id }) => {
+          ({ project_title, project_description, project_technologies, _id, repo, deploy }) => {
             return (
               <ProjectCard
                 key={_id}
                 projectTitle={project_title}
                 projectDescription={project_description}
                 projectTechnologies={project_technologies}
+                repo={repo}
+                deploy={deploy}
               />
             );
           }

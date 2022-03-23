@@ -7,11 +7,19 @@ const ProjectSchema = new mongoose.Schema({
   },
   project_description: {
     type: String,
-    require: [true, "Add icon"],
+    require: [true, "Add description"],
   },
   project_technologies: {
     type: Array,
-    require: [true, "Add icon"],
+    require: [true, "Add technology"],
+  },
+  repo: {
+    type: String,
+    require: [true, "Add repo"],
+  },
+  deploy: {
+    type: String,
+    require: [true, "Add repo"],
   }
 });
 
