@@ -17,6 +17,7 @@
     width: 100%;
     padding: 10px 25px;
     border-radius: 7px;
+    cursor: pointer;
   }
   .myProjectsContainer .btnsContainer .gitHub {
     border-width: 0;
@@ -50,6 +51,7 @@
     border-color: #282828;
     color: #282828;
     font-weight: 600;
+    background: #f9fbff;
   }
   .myProjectsContainer .btnsContainer .deploy:hover {
     border-color: transparent;
@@ -93,7 +95,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    row-gap: 20px;
+    row-gap: 10px;
     margin-bottom: 40px;
   }
   .myProjectsContainer .projectCardContainer .projectTitle {
@@ -123,6 +125,83 @@
     font-weight: 600;
     border-radius: 50px;
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 725px) {
+  .myProjectsContainer {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    padding: 40px 50px 0 50px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .myProjectsContainer {
+    display: -ms-grid;
+    display: grid;
+    justify-items: initial;
+    padding: 110px 0 0 0;
+    max-width: 1015px;
+  }
+  .myProjectsContainer .myProjects {
+    font-size: 4rem;
+    text-align: initial;
+  }
+  .myProjectsContainer .projectCardContainer {
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .myProjectsContainer .projectCardContainer .tagsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .myProjectsContainer .projectCardContainer .tagsContainer .tag {
+    padding: 5px 15px;
+    background: #eaebee;
+    color: rgba(41, 41, 41, 0.7);
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 1.2rem;
+  }
+  .myProjectsContainer .projectsDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+  .myProjectsContainer .titleContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    opacity: 90%;
+  }
+  .myProjectsContainer .projectP {
+    text-align: left;
+    padding-bottom: 10px;
+    color: #282828;
+    opacity: 80%;
   }
 }
 /*# sourceMappingURL=Projects.module.css.map */

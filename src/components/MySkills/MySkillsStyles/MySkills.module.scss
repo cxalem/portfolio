@@ -44,8 +44,56 @@ $background-color: #f9fbff;
       }
 }
 
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 725px) {
+  .mySkillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0 0;
+    .mySkills {
+      color: $font-color;
+      font-size: 3rem;
+      text-align: center;
+      padding-bottom: 10px;
+      opacity: 90%;
+    }
+    .skillsGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      justify-content: space-between;
+      justify-items: center;
+      row-gap: 20px;
+      column-gap: 40px;
+      padding-top: 35px;
+    }
+  }
 }
 
-@media screen and (min-width: 1114px) {
+@media screen and (min-width: 1050px) {
+  .mySkillsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    padding: 110px 0 0 0;
+    width: 1015px;
+    .mySkills {
+      color: $font-color;
+      font-size: 4rem;
+      text-align: initial;
+      padding-bottom: 10px;
+      opacity: 90%;
+    }
+    .skillsGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      width: 100%;
+      justify-content: space-between;
+      justify-items: center;
+      row-gap: 40px;
+      column-gap: 80px;
+      padding-top: 35px;
+      max-width: 1015px;
+    }
+  }
 }

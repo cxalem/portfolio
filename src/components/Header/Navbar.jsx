@@ -10,19 +10,19 @@ export default function Navbar() {
     <nav className={headerStyles.nav}>
       <ul className={headerStyles.ul}>
         <li className={headerStyles.li}>
-          <Home />
+          <Home className={headerStyles.icon} />
           <span className={headerStyles.span}>Portfolio</span>
         </li>
         <li className={headerStyles.li}>
-          <Resources />
+          <Resources className={headerStyles.icon} />
           <span className={headerStyles.span}>Resources</span>
         </li>
         <li className={headerStyles.li}>
-          <Contact />
+          <Contact className={headerStyles.icon} />
           <span className={headerStyles.span}>Contact</span>
         </li>
         <li className={headerStyles.li}>
-          <Login />
+          <Login className={headerStyles.icon} />
           <span className={headerStyles.span}>Login</span>
         </li>
       </ul>

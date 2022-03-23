@@ -15,6 +15,14 @@
             align-items: center;
     padding: 40px 30px 0 30px;
   }
+  .aboutMeSection .aboutMeInfo {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
   .aboutMeSection .aboutMe {
     color: #282828;
     font-size: 3rem;
@@ -24,6 +32,46 @@
   }
   .aboutMeSection .aboutMeP {
     text-align: center;
+    padding-bottom: 10px;
+    color: #282828;
+    opacity: 80%;
+  }
+}
+
+@media screen and (min-width: 825px) {
+  .aboutMeSection {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 110px 0 0 0;
+    max-width: 1015px;
+    justify-items: center;
+        grid-template-areas: "img info";
+  }
+  .aboutMeSection .aboutMeImg {
+    width: 423px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+  }
+  .aboutMeSection .aboutMeInfo {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: initial;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: info;
+  }
+  .aboutMeSection .aboutMe {
+    text-align: left;
+    font-size: 5.5rem;
+  }
+  .aboutMeSection .aboutMeP {
+    text-align: left;
     padding-bottom: 10px;
     color: #282828;
     opacity: 80%;
