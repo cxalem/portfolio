@@ -16,7 +16,7 @@ export default function Hero() {
       autoplay: true,
       animationData: require("@images/hero-animation.json"),
     });
-  });
+  }, []);
 
   return (
     <div className={heroStyles.hero}>
