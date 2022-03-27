@@ -12,20 +12,25 @@ $background-color: #F9FBFF;
       flex-direction: column;
       align-items: center;
       row-gap: 25px;
-    }
-    .contactMeBtn {
-        border-width: 0;
-        padding: 10px 30px;
-        background: $font-color;
-        color: $background-color;
-        border-radius: 5px;
-        font-weight: 500;
-        width: 80%;
-        cursor: pointer;
-        &:hover {
-            opacity: 80%;
-            transition: ease-in-out 0.1s;
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .contactMeBtn {
+            border-width: 0;
+            padding: 10px 30px;
+            background: $font-color;
+            color: $background-color;
+            border-radius: 5px;
+            font-weight: 500;
+            width: 80%;
+            cursor: pointer;
+            &:hover {
+                opacity: 80%;
+                transition: ease-in-out 0.1s;
+            }
         }
+      }
     }
     .infoContainer {
         display: flex;
@@ -61,6 +66,9 @@ $background-color: #F9FBFF;
     }
     .infoHero {
       align-items: initial;
+      a {
+        justify-content: flex-start;
+      }
     }
     .infoContainer {
         display: flex;
