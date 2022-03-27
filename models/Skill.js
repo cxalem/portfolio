@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const SkillSchema = new mongoose.Schema({
   skill_title: {
     type: String,
-    require: [true, "Add title"],
+    required: [true, "Add title"],
   },
   skill_icon: {
     type: String,
-    require: [true, "Add icon"],
+    required: [true, "Add icon"],
   }
 });
 

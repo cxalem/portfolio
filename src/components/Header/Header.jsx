@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.img}>
-        <Devam width="152px" height="35px" viewBox="37 -2 30 30" />
+        <Devam fill="#282828" width="152px" height="35px" viewBox="37 -2 30 30" />
       </div>
       <Navbar />
     </header>

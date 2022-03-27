@@ -3,23 +3,23 @@ import mongoose from "mongoose";
 const ProjectSchema = new mongoose.Schema({
   project_title: {
     type: String,
-    require: [true, "Add title"],
+    required: [true, "Add title"],
   },
   project_description: {
     type: String,
-    require: [true, "Add description"],
+    required: [true, "Add description"],
   },
   project_technologies: {
     type: Array,
-    require: [true, "Add technology"],
+    required: [true, "Add technology"],
   },
   repo: {
     type: String,
-    require: [true, "Add repo"],
+    required: [true, "Add Repo"],
   },
   deploy: {
     type: String,
-    require: [true, "Add repo"],
+    required: [true, "Add Deploy"],
   }
 });
 
