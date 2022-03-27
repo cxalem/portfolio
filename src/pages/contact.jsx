@@ -36,6 +36,11 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     postData(form);
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    })
   };
 
   const postData = async (form) => {
