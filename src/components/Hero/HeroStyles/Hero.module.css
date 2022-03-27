@@ -27,6 +27,7 @@
     border-radius: 5px;
     font-weight: 500;
     width: 80%;
+    cursor: pointer;
   }
   .hero .contactMeBtn:hover {
     opacity: 80%;

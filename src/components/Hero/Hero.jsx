@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import heroStyles from "./HeroStyles/Hero.module.css";
 import lottie from "lottie-web";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Hero() {
   const animation = useRef(null);
@@ -15,21 +16,26 @@ export default function Hero() {
       autoplay: true,
       animationData: require("@images/hero-animation.json"),
     });
-  })
+  });
 
   return (
     <div className={heroStyles.hero}>
       <div className={heroStyles.infoHero}>
         <div className={heroStyles.infoContainer}>
-          <h1 className={heroStyles.heroH1}>Alejandro <span>José Mena</span></h1>
+          <h1 className={heroStyles.heroH1}>
+            Alejandro <span>José Mena</span>
+          </h1>
           <span className={heroStyles.heroSpan}>
             Frontend Developer | ReactJS | Next.js
           </span>
         </div>
-        <button className={heroStyles.contactMeBtn}>Contact me!</button>
+        <Link href="/contact">
+          <a>
+            <button className={heroStyles.contactMeBtn}>Contact me!</button>
+          </a>
+        </Link>
       </div>
-      <div ref={animation} className={heroStyles.heroImg}>
-      </div>
+      <div ref={animation} className={heroStyles.heroImg}></div>
     </div>
   );
 }
