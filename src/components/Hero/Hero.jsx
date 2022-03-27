@@ -1,8 +1,22 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import heroStyles from "./HeroStyles/Hero.module.css";
+import lottie from "lottie-web";
+import { useEffect } from "react";
 
 export default function Hero() {
+  const animation = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: animation.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("@images/hero-animation.json"),
+    });
+  })
+
   return (
     <div className={heroStyles.hero}>
       <div className={heroStyles.infoHero}>
@@ -14,13 +28,7 @@ export default function Hero() {
         </div>
         <button className={heroStyles.contactMeBtn}>Contact me!</button>
       </div>
-      <div className={heroStyles.heroImg}>
-        <Image
-          src={"/images/hero-img.png"}
-          width={330}
-          height={240}
-          alt="Alejandro José | Devam"
-        />
+      <div ref={animation} className={heroStyles.heroImg}>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@
             "@SVGComponents/*": ["./src/components/SVGComponents/*"],
             "@models/*": ["./models/*"],
             "@lib/*": ["./lib/*"],
+            "@images/*": ["./public/images/*"],
         }
     }
 }
