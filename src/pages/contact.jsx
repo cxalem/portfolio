@@ -20,7 +20,7 @@ export default function Contact() {
       autoplay: true,
       animationData: require("@images/contact-lottie.json"),
     });
-  })
+  }, [])
 
   const [form, setForm] = useState({
     name: "",
